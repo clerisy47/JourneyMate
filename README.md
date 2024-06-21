@@ -1,2 +1,2 @@
-# JourneyMate
-JourneyMate, your personal smart travel assistant!
+# Journey Mate
+Journey Mate, your personal smart travel assistant!
