@@ -1,6 +1,4 @@
-/* src/components/Layout/Header.css */
 header {
-  background-color: #f8f9fa;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -10,7 +8,13 @@ header {
 nav ul {
   list-style-type: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul div {
+  border: 2px solid red;
 }
 
 nav ul li {
@@ -19,7 +23,31 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #007BFF;
+  color: black;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007BFF;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+nav ul li:hover a {
+  color: blue;
 }
 
 nav ul li.profile-icon {
